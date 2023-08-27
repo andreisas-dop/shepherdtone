@@ -1,0 +1,8 @@
+# jekyll
+_site/
+Gemfile.lock
+.sass-cache
+
+# vim
+*.swp
+*.swo
