@@ -1,0 +1,33 @@
+---
+layout: page
+---
+
+<div class="container">
+  <div class="row">
+    <p>&nbsp;</p>
+
+    <p class="text-center">
+    {{ page.toptext }}
+    </p>
+  </div>
+</div>
+
+
+<div class="text-image-list">
+  {% for item in page.itemlist %}
+  <div class="listing-item">
+    <div class="row">
+      <a class="image"><img src="{{ item.img }}"></a>
+      <h2>{{ item.name }}</h2>
+      <p class="text-center-xs text-center-sm text-center-md">
+        {{ item.text }}
+      </p>
+     {% if item.link %}
+     <a class="more-link" href="item.link">Find out more</a>
+     {% endif %}
+     </div>
+  </div>
+  {% endfor %}
+</div>
+
+{{ content }}

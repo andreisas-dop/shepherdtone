@@ -11,8 +11,9 @@ title: ShepherdTone - Film Production & Media Services
       </video>
     </div>
   </div>
+
   <div class="home-main">
-    <img src="/assets/img/logo.png" alt="LOGO" class="shadow-img">
+    <img src="/assets/img/logo.png" alt="SHEPHERDTONE" class="shadow-img">
     <p></p>
     <h1>
       <span class="red">SHEPHERD</span>
@@ -20,12 +21,14 @@ title: ShepherdTone - Film Production & Media Services
     </h1>
     <h2 class="white">film production and media services</h2>
   </div>
+
   <div class="row">
     <p>&nbsp;</p>
     <p> ShepherdTone is a group of artists and media professionals equipped with a broad knowledge of film form and audio-visual communication that have banded together to tell the most compelling and visually stimulating stories possible.</p>
     <p>Our goal is to give all of our projects a cinematic treatment and make them connect with audiences worldwide. We want to release our clients and collaborators from the burden of uncertain technicalities and aesthetic doubt, to make the film-making process easy and fun.</p>
     <p>&nbsp;</p>
   </div>
+
   <div class="red-bg">
     <div class="row">
       <h2>The process</h2>
@@ -129,6 +132,7 @@ title: ShepherdTone - Film Production & Media Services
       </ul>
     </div>
   </div>
+
   <div class="black-bg">
     <div class="row">
       <h2 class="white">Featured Content</h2>
@@ -137,26 +141,27 @@ title: ShepherdTone - Film Production & Media Services
       <iframe loading="lazy" src="https://player.vimeo.com/video/276722890" allowfullscreen="allowfullscreen" align="center" data-ruffle-polyfilled="" width="800" height="480" frameborder="0"></iframe>
     </div>
   </div>
-  <div>
-    <div class="row">
-      <h2>OUR CLIENTS</h2>
-      <div class="clients">
-        <img src="assets/img/logos/logo-16.png">
-        <img src="assets/img/logos/logo-14.png">
-        <img src="assets/img/logos/logo-15.png">
-        <img src="assets/img/logos/logo-4.jpg">
-        <img src="assets/img/logos/logo-0.png">
-        <img src="assets/img/logos/logo-1.png">
-        <img src="assets/img/logos/logo-2.png">
-        <img src="assets/img/logos/logo-3.png">
-        <img src="assets/img/logos/logo-5.jpg">
-        <img src="assets/img/logos/logo-6.png">
-        <img src="assets/img/logos/logo-7.jpg">
-        <img src="assets/img/logos/logo-8.png">
-        <img src="assets/img/logos/logo-11.jpg">
-        <img src="assets/img/logos/logo-12.jpg">
-        <img src="assets/img/logos/logo-13.jpg">
-      </div>
+
+  <div class="row">
+    <h2>OUR CLIENTS</h2>
+    <div class="logos logos-3 logos-5 ">
+      <img src="assets/img/logos/logo-16.png">
+      <img src="assets/img/logos/logo-14.png">
+      <img src="assets/img/logos/logo-15.png">
+      <img src="assets/img/logos/logo-4.jpg">
+      <img src="assets/img/logos/logo-0.png">
+      <img src="assets/img/logos/logo-1.png">
+      <img src="assets/img/logos/logo-2.png">
+      <img src="assets/img/logos/logo-3.png">
+      <img src="assets/img/logos/logo-5.jpg">
+      <img src="assets/img/logos/logo-6.png">
+      <img src="assets/img/logos/logo-7.jpg">
+      <img src="assets/img/logos/logo-8.png">
+      <img src="assets/img/logos/logo-11.jpg">
+      <img src="assets/img/logos/logo-12.jpg">
+      <img src="assets/img/logos/logo-13.jpg">
     </div>
+    <p>&nbsp;</p>
   </div>
+
 </div>
