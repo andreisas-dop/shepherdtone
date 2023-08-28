@@ -37,10 +37,11 @@ h2 {
 	font-weight: normal;
 	word-spacing: 6px;
 }
-h4 {
+h3, h4 {
 	font-family: 'proxima-nova', Raleway, sans-serif;
 	font-weight: 700;
 	text-align: center;
+	letter-spacing: 1px;
 }
 h5 {
 	font: normal 40px 'Tungsten-Condensed-Light';
@@ -73,6 +74,8 @@ p {
 	font: normal 400 17px/21px 'proxima-nova', Raleway, sans-serif;
 }
 
+.sup { margin-bottom: 2px; }
+.sub { margin-top:    2px; }
 
 
 /* Colours
@@ -463,7 +466,7 @@ h1.page-header-title {
 }
 
 
-/* Responsive logos on 5 and 3 columns */
+/* responsive logos on 5 and 3 columns */
 .logos img {
     box-sizing: border-box;
 	padding: 10px 5px;
@@ -582,4 +585,12 @@ h1.page-header-title {
 	}
 }
 
-
+/* square images */
+.square {
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.square img {
+  width: calc(100% - 40px);
+}
