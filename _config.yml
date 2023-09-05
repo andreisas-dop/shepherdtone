@@ -30,3 +30,41 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # Build settings
 theme: minima
 
+# Collections
+# won't generate individual pages but will grab data for each collection item
+collections_dir: portfolio
+collections:
+  narrative:
+    title: Narrative Film
+    order: 1
+    output: false
+    text: "Film is perhaps the most engaging form of visual storytelling. The end goal is to captivate the audience and produce inspiring artefacts of the human condition."
+  music:
+    title: Music Videos
+    order: 2
+    output: false
+    text: "The music video is a lynchpin to the modern musician. Nowadays more talent is being discovered through video streaming platforms than any other means. Our aim is to create the best possible visuals that complement your music."
+  editorial:
+    title: Editorial
+    order: 3
+    output: false
+    text: "We live in a world where artists and entrepreneurs can address their target audience directly and as such digital content comes in varied formats that steer away from traditional media."
+  promo:
+    title: Adverts & Branded Content
+    order: 4
+    output: false
+    text: "The best way to get your demographic talking is to ask a question and have the answear lead to you. To this end, promotional videos are evolving into true narratives in their own right, becoming more than marketing tools."
+  corporate:
+    title: Corporate & Education
+    order: 5
+    output: false
+    text: "When promoting a new business, or documenting an important event, a press release just isn’t enough anymore. Using online video as a tool to this end is an important part of what we do."
+  live:
+    title: Live Sessions
+    order: 6
+    output: false
+    text: "Sometimes it’s hard to gauge a performer by listening to their radio singles. Live sessions take the veil off and allow the audience to get to know you in an intimate, personal video."
+  photography:
+    title: Photography
+    order: 7
+    output: false
