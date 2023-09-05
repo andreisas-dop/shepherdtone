@@ -125,7 +125,7 @@ p { color: #2b2b2b; }
 .black, .black p, .black a { color: #2b2b2b; }
 
 a { color: #af473c; }
-a:hover { color: #626e60; }
+a:hover { color: #666; }
 a, a:hover, a:hover > * {
     transition: all .7s;
     -o-transition: all .7s;
@@ -134,7 +134,7 @@ a, a:hover, a:hover > * {
     text-decoration: none;
 }
 
-.dark-bg, .grey-bg, .red-bg {
+.dark-bg, .grey-bg, .red-bg, .green-bg {
     background-image: url('/assets/img/noise-bg.png');
 }
 
@@ -143,6 +143,7 @@ a, a:hover, a:hover > * {
 .grey-bg  { background-color: #eee;    }
 .dark-bg  { background-color: #2c2c2c; }
 .black-bg { background-color: #000;    }
+.green-bg { background-color: #626e60; }
 
 .shadow {
     text-shadow: .4vw .4vw 0 #1b1b1b;
@@ -572,6 +573,15 @@ h1.page-header-title {
     margin-top: 0;
     margin-bottom: 25%;
 }
+
+
+/* fullscreen video */
+.fullscreen iframe {
+    z-index: 10;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+}
+
 
 
 /* text and image listing, horizontal  */

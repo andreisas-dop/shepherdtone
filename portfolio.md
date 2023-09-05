@@ -33,20 +33,9 @@ The projects that we work on are a point of pride for us. We’ve been fortunate
       {% if mod == 0 %}
     <div class="row">
       {% endif %}
-      <a class="col-1-of-3">
-        <div class="image">
-          <img src="{{ item.thumb }}">
-        </div>
-        <h2 class="text-center">{{ item.title }}</h2>
-      {% if item.dir %}
-        <h4 class="text-center">Dir. {{ item.dir }}</h4>
-      {% else %}
-        <h4 class="text-center">&nbsp;</h4>
-      {% endif %}
 
       {% include video.html %}
 
-      </a>
       {% if mod == 2 %}
     </div>
       {% endif %}

@@ -1,9 +1,29 @@
+{% if item.youtube_id %}
+  {% assign video_id = item.youtube_id %}
+  {% assign player_id = "https://www.youtube.com/embed/" %}
+{% elsif item.vimeo_id %}
+  {% assign video_id = item.vimeo_id %}
+  {% assign player_id = "https://player.vimeo.com/video/" %}
+{% endif %}
 
-    <div class="fullscreen">
-      {% if item.youtube_id %}
-      <iframe  loading="lazy" src="https://www.youtube.com/embed/{{ item.youtube_id }}?rel=0" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" webkitallowfullscreen mozallowfullscreen allowfullscreen class="hide"></iframe>
-      {% elsif item.vimeo_id %}
-      <iframe  loading="lazy" src="https://player.vimeo.com/video/{{ item.vimeo_id }}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen class="hide"></iframe>
-      {% endif %}
-    </div>
 
+<a class="col-1-of-3" onclick="fullscreen('video_{{ video_id }}')">
+
+  <div class="image">
+    <img src="{{ item.thumb }}">
+  </div>
+  <h2 class="text-center">{{ item.title }}</h2>
+  {% if item.dir %}
+    <h4 class="text-center">Dir. {{ item.dir }}</h4>
+  {% else %}
+    <h4 class="text-center">&nbsp;</h4>
+  {% endif %}
+
+  <div class="fullscreen" id="video_{{ video_id }}">
+    <iframe src="{{ player_id }}" frameborder="0" loading="lazy"
+            webkitallowfullscreen mozallowfullscreen allowfullscreen allow="fullscreen;"
+            class="hide">
+    </iframe>
+  </div>
+
+</a>
