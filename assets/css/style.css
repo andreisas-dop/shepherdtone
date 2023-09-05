@@ -35,6 +35,7 @@ h1 {
 h2 {
     font: normal 48px 'Tungsten-Condensed-Light';
     font-weight: normal;
+    text-transform: upptercase;
     word-spacing: 6px;
 }
 h3, h4 {
@@ -78,9 +79,45 @@ p {
 .sub { margin-top:    2px; }
 
 
+.fa {
+    text-align: center;    
+    width: 28px;
+}
+
+form .row, form p {
+    margin: 0 auto;
+    padding: 0;
+}
+form p {
+    padding-top: 8px;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="phone"],
+form input[type="url"],
+form input[type="date"],
+form textarea {
+    margin: 0 auto;
+    font-family: 'proxima-nova', Raleway, sans-serif;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    padding-left: 5px;
+    font-size: 16px;
+    line-height: 32px;
+}
+form .red {
+    font-size: 35px;
+    line-height: 17px;
+    position: relative;
+    top: 8px;
+}
+
+
+
 /* Colours
 ================================================== */
-p {    color: #2b2b2b; }
+p { color: #2b2b2b; }
 
 .red,   .red   p, .red a   { color: #af473c; }
 .grey,  .grey  p, .grey a  { color: #ddd;    }
@@ -101,10 +138,10 @@ a, a:hover, a:hover > * {
     background-image: url('/assets/img/noise-bg.png');
 }
 
-.white-bg {    background-color: #fff;    }
-.red-bg   {    background-color: #af473c; }
-.grey-bg  {    background-color: #eee;    }
-.dark-bg  {    background-color: #2c2c2c; }
+.white-bg { background-color: #fff;    }
+.red-bg   { background-color: #af473c; }
+.grey-bg  { background-color: #eee;    }
+.dark-bg  { background-color: #2c2c2c; }
 .black-bg { background-color: #000;    }
 
 .shadow {
@@ -116,7 +153,7 @@ a, a:hover, a:hover > * {
 }
 
 .button {
-    box-shadow: 0 0 -2px rgba(0,0,0,0.8);
+    border: 0;
     margin: 20px auto;
     padding: 8px;
     text-align: center;
@@ -130,6 +167,7 @@ a, a:hover, a:hover > * {
 }
 .button:hover {
     background-color: #2c2c2c;
+    color: #f4f4f4;
 }
 
 .button.narrow {
@@ -218,27 +256,18 @@ a#close-menu  {
 
 /* Footer
 ================================================== */
-footer h4 {
+footer h2 {
     margin: 20px 0;
     text-align: left;
-    color: #af473c;
-    font: normal 29px "Tungsten-Condensed-Medium";
+    font-size: 29px;
     letter-spacing: 3px;
-    text-transform: uppercase;
+    font-weight: bold;
 }
 footer p {
-    color: #f4f4f4;
     text-align: left;
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 1px;
 }
-
-footer .fa {
-    width: 26px;
-    text-align: center;
-    color: #af473c;
-}
-
 footer ul {
     padding-left: 0;
 }
@@ -263,8 +292,7 @@ footer li a:before {
 #copyright p {
     font-family: 'Montserrat', Helvetica, sans-serif;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 
