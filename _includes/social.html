@@ -1,0 +1,7 @@
+<div class="social-media-list">
+  {%- if include.socials.twitter_username   -%} <a target="_blank" href="https://www.twitter.com/{{ include.socials.twitter_username   | cgi_escape | escape }}"> <img class="svg-icon" src="/assets/img/social/twitter.png"    /></a>{%- endif -%}
+  {%- if include.socials.youtube_username   -%} <a target="_blank" href="https://youtube.com/{{ include.socials.youtube_username       | cgi_escape | escape }}"> <img class="svg-icon" src="/assets/img/social/youtube.png"    /></a>{%- endif -%}
+  {%- if include.socials.facebook_username  -%} <a target="_blank" href="https://www.facebook.com/{{ include.socials.facebook_username | cgi_escape | escape }}"> <img class="svg-icon" src="/assets/img/social/facebook.png"   /></a>{%- endif -%}
+  {%- if include.socials.instagram_username -%} <a target="_blank" href="https://instagram.com/{{ include.socials.instagram_username   | cgi_escape | escape }}"> <img class="svg-icon" src="/assets/img/social/instagram.png"  /></a>{%- endif -%}
+  {%- if include.socials.filmfreeway        -%} <a target="_blank" href="https://filmfreeway.com/{{ include.socials.filmfreeway        | cgi_escape | escape }}"> <img class="svg-icon" src="/assets/img/social/filmfreeway.png"/></a>{%- endif -%}
+</div>

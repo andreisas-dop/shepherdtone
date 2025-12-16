@@ -1,0 +1,169 @@
+---
+layout: default 
+---
+
+<div class="container">
+  {% assign o = page.overview %}
+
+  <div class="row">
+    <div class="col-1-of-2">
+      <h3 class="text-left">{{ page.title }}</h3>
+      <p>Dir. <b> {{ o.director }} </b></p>
+      <p>Starring <b> {{ o.cast }} </b></p>
+      <p> {{ page.logline | markdownify }} </p> 
+
+      <p>&nbsp;</p>
+      <h3> Film electronic press kit</h3>
+      <div>
+      <ul class="menu text-center">
+        <li class="black-bg"><a href="https://vimeo.com/{{ page.vimeo_id }}" target="_blank">Trailer</a></li> 
+        <li class="black-bg"><a href="{{ page.poster       }}" target="_blank">Poster       </a></li> 
+        <li class="black-bg"><a href="{{ page.links.pk     }}" target="_blank">PDF Press Kit</a></li> 
+        <li class="black-bg"><a href="{{ page.links.stills }}" target="_blank">Stills       </a></li> 
+        <li class="black-bg"><a href="{{ page.links.bts    }}" target="_blank">BTS          </a></li> 
+      </ul>
+      </div>
+
+      <div class="text-center">
+      {%- include social.html socials = page.socials -%}
+      </div>
+    </div>
+    <div class="col-1-of-2">
+      <img src=" {{ page.poster }}" />
+    </div>
+  </div>
+  <p>&nbsp;</p>
+</div>
+
+
+<div class="slider-container">
+  <div class="slider">
+    {% for img in page.stills %}
+      {% if forloop.index0  == 0 %}
+      <img src="{{ img }}"/>
+      {% else %}
+      <img src="{{ img }}" class="hide"/>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <span class="prev"> ◀️ </span>
+  <span class="next"> ▶️ </span>
+</div>
+
+<div class="container">
+  <div class="row">
+    <p>&nbsp;</p>
+    <h4 class="text-left upper">Short synopsis</h4>
+    <p>{{ page.synopsis.short | markdownify }} </p>
+    <h4 class="text-left upper">Long synopsis</h4>
+    <p>{{ page.synopsis.long | markdownify }} </p>
+    <p>&nbsp;</p>
+  </div>
+</div>
+
+<div class="container black-bg">
+  <div class="video">
+    <iframe loading="lazy" src="https://player.vimeo.com/video/{{ vimeo_id }}" allowfullscreen="allowfullscreen" align="center" data-ruffle-polyfilled="" width="800" height="480" frameborder="0"></iframe>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <p>&nbsp;</p>
+    <h3 class="center">Film information</h3>
+    <table>
+      <tr><td>English Title     </td><td> {{ page.title          }}</tr>
+      <tr><td>Original Title    </td><td> {{ o.original_title    }}</tr>
+      <tr><td>Genre             </td><td> {{ o.genre             }}</tr>
+      <tr><td>Language          </td><td> {{ o.language          }}</tr>
+      <tr><td>Country           </td><td> {{ o.country           }}</tr>
+      <tr><td>Directed by       </td><td> {{ o.director          }}</tr>
+      <tr><td>Screenplay        </td><td> {{ o.screenplay        }}</tr>
+      <tr><td>Cast              </td><td> {{ o.cast              }}</tr>
+      <tr><td>Presented by      </td><td> {{ o.presented_by      }}</tr>
+      <tr><td>Production        </td><td> {{ o.production        }}</tr>
+      <tr><td>Production year   </td><td> {{ o.production_year   }}</tr>
+      <tr><td>Release date      </td><td> {{ o.release_date      }}</tr>
+      <tr><td>Running time      </td><td> {{ o.running_time      }}</tr>
+      <tr><td>Aspect ratio      </td><td> {{ o.aspect_ratio      }}</tr>
+      <tr><td>Framerate         </td><td> {{ o.frame_rate        }}</tr>
+      <tr><td>Shooting format   </td><td> {{ o.shooting_format   }}</tr>
+      <tr><td>Exhibition format </td><td> {{ o.exhibition_format }}</tr>
+      <tr><td>Sound             </td><td> {{ o.sound             }}</tr>
+    </table>
+    <p>&nbsp;</p>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <img src="{{ page.content-img[0] }}" />
+  </div>
+</div>
+
+
+{% if page.director_statement %}
+<div class="container">
+  <p>&nbsp;</p>
+  <div class="row">
+    <h3 class="center">Director's Statement</h3>
+    {% if page.dir_statement_img %}
+    <img src="{{ page.dir_statement_img }}" class="right col-1-of-3">
+    {% endif %}
+    <p>{{ page.director_statement | markdownify }}</p>
+  </div>
+  <p>&nbsp;</p>
+</div>
+{% endif %}
+
+
+<div class="container">
+  <div class="row">
+    <img src="{{ page.content-img[1] }}" />
+  </div>
+  <p>&nbsp;</p>
+</div>
+
+<div class="container">
+  <div class="people">
+    <div class="text-image-list">
+      {% for p in page.personnel %}
+      <div class="listing-item">
+        <div class="row">
+          <a class="image"><img src="{{ p.photo }}"></a>
+          <h3 class="align">{{ p.name }}</h3>
+          <h6 class="align">{{ p.title }}</h6>
+          {{ p.bio | markdownify }}
+        </div>
+      </div>
+      {% endfor %}
+
+      {% for p in page.cast %}
+      <div class="listing-item">
+        <div class="row">
+          <a class="image"><img src="{{ p.photo }}"></a>
+          <h3 class="align">{{ p.name }}</h3>
+          <h6 class="align">as {{ p.role }}</h6>
+          {{ p.bio | markdownify }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    {% if page.content %}
+      {{ content }}
+    {% endif %}
+  </div>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</div>
+
+
+
+<script src="/assets/js/slide.js" />

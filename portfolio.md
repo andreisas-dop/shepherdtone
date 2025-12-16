@@ -16,32 +16,32 @@ The projects that we work on are a point of pride for us. We’ve been fortunate
 
 <div class="container portfolio">
 {% assign collections =  site.collections | sort:"order" %}
-{% for collection in collections %}
-  {% assign collection_name = collection.label | default: include.collection_name | default: nil %}
-  {% assign current = site[collection_name] | reverse %}
-  {% assign size_curr = current | size %}
+  {% for collection in collections %}
+    {% assign collection_name = collection.label | default: include.collection_name | default: nil %}
+    {% assign current = site[collection_name] | reverse %}
+    {% assign size_curr = current | size %}
 
-  {% if size_curr > 0 %}
-  <div class="row">
-   <h2>{{ collection.title }}</h2>
-   <p class="text-center">{{ collection.text }}</p>
-  </div>
-
-  <div class="video-gallery">
-    {% for item in current %}
-      {% assign mod = forloop.index0 | modulo : 3 %}
-      {% if mod == 0 %}
+    {% if size_curr > 0 and collection.order > 0 %}
     <div class="row">
-      {% endif %}
-
-      {% include video.html %}
-
-      {% if mod == 2 %}
+     <h2>{{ collection.title }}</h2>
+     <p class="text-center">{{ collection.text }}</p>
     </div>
-      {% endif %}
-    {% endfor %}
-  {% endif %}
-{% endfor %}
+
+    <div class="video-gallery">
+      {% for item in current %}
+        {% assign mod = forloop.index0 | modulo : 3 %}
+        {% if mod == 0 %}
+      <div class="row">
+        {% endif %}
+
+        {% include video.html %}
+
+        {% if mod == 2 %}
+      </div>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
 </div>
 
 

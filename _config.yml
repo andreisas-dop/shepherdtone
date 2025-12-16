@@ -26,12 +26,11 @@ url: "https://www.shepherdtone.co.uk" # the base hostname & protocol for your si
 #linkedin: andrei-sas
 #twitter: andreisas_dop
 
-
 # Build settings
 theme: minima
 
 # Collections
-# won't generate individual pages but will grab data for each collection item
+# output: false won't generate individual pages but will grab data for each collection item
 collections_dir: portfolio
 collections:
   narrative:
@@ -68,3 +67,20 @@ collections:
     title: Photography
     order: 7
     output: false
+  EPK:
+    title: Film EPKs
+    order: 0
+    permalink: /:path
+    output: true
+
+# specify default template for collections
+defaults:
+  - scope:
+      path: ""
+      type: "EPK"
+    values:
+      layout: "epk"
+  - scope:
+      path: ""
+    values:
+      layout: "default"

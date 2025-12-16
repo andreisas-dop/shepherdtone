@@ -22,7 +22,7 @@
 }
 
 
-/* Typography
+/* Typography & Layout
 ================================================== */
 h1, h2, h3, h5 {
     text-align: center;
@@ -69,20 +69,24 @@ a, a:hover {
     text-decoration: none;
 }
 
-p {
-    text-align: justify;
+li, ul, ol, td, p {
     letter-spacing: 1px;
     font: normal 400 17px/21px 'proxima-nova', Montserrat, sans-serif;
 }
+p { text-align: justify; }
 
 .sup { margin-bottom: 2px; }
 .sub { margin-top:    2px; }
 
+.upper { text-transform: uppercase; }
 
 .fa {
     text-align: center;    
     width: 28px;
 }
+
+table { margin: 0 auto; }
+td { padding: 0 10px; }
 
 form .row, form p {
     margin: 0 auto;
@@ -297,7 +301,6 @@ footer li a:before {
 }
 
 
-
 /* Homepage custom styles
 ================================================== */
 
@@ -455,7 +458,7 @@ footer li a:before {
 
 /* Embedded video */
 .video {
-    margin-top: -50px;
+    /*margin-top: -50px;*/
     width: 100%;
     background-color: #000;
     text-align: center;
@@ -594,6 +597,14 @@ h1.page-header-title {
     margin-top: 24px;
     margin-bottom: 10px;
 }
+.text-image-list h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.text-image-list h6 {
+    margin: 0;
+    font-weight: bold;
+}
 .text-image-list .listing-item .row {
     padding-top: 0;
     padding-bottom: 0;
@@ -615,6 +626,7 @@ h1.page-header-title {
 }
 
 @media (min-width: 960px) {
+    /* general styles */
     .text-image-list .listing-item {
         height: 280px;
     }
@@ -634,11 +646,18 @@ h1.page-header-title {
         margin-right: 20px;
     }
 
+    .text-image-list .listing-item:nth-child(even) .align {
+        text-align: right;
+        margin-left: 20px;
+    }
+    .text-image-list .listing-item:nth-child(odd) .align {
+        text-align: left;
+        margin-right: 20px;
+    }
     .text-image-list .image img {
         height: 280px;
         width: auto;
     }
-
     .text-image-list .listing-item:nth-child(even) a.more-link {
         float: left;
         margin-left: 20px;
@@ -647,10 +666,24 @@ h1.page-header-title {
         float: right;
         margin-right: 20px;
     }
+
+    /* fit for vertical orientation photos */
+    .people .text-image-list .listing-item {
+        height: 420px;
+    }
+    .people .text-image-list .image {
+        max-width: 280px;
+        max-height: 420px;
+        width: 100%;
+        height: 150%;
+    }
+    .people .text-image-list .image img {
+        height: 420px;
+    }
 }
 
 @media (max-width: 959px) {
-       .text-image-list .listing-item {
+    .text-image-list .listing-item {
         padding-bottom: 40px;
     }
     .text-image-list .row {
@@ -672,6 +705,14 @@ h1.page-header-title {
     .text-image-list .listing-item  a.more-link {
         margin: 0 auto;
     }
+
+    /* fit for vertical orientation photos */
+    .people .text-image-list .image img {
+        width: 320px;
+        display: block;
+        max-width: 80%;
+        margin: 40px auto 0 auto;
+    }
 }
 
 /* square images */
@@ -682,4 +723,25 @@ h1.page-header-title {
 }
 .square img {
     width: calc(100% - 40px);
+}
+
+
+/* slider */
+.slider-container {
+  width: 100vw;
+  height: calc(100vw / 2.35);
+  overflow: hidden;
+  background: #000;
+}
+.slider .hide img {
+  opacity: 0;
+}
+.slider img {
+  width: 100vw;
+  height: calc(100vw / 2.35);
+  transition: opacity 1000ms ease-in-out; 
+}
+
+table tr td:nth-child(1) {
+  font-weight: 600;
 }
