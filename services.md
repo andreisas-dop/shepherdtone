@@ -27,6 +27,7 @@ itemlist:
     text: The sound mix is one of the most crucial stages of any media experience. In the mix, we take the many seperates elements of a film soundtrack or song and constantly merging them into a seamless aural journey. We offer Stereo and Surround mixes for Film, TV and Radio.
   - name: Photography
     img: "/assets/img/Photography.jpg"
+    text: Before images could move, they stood still. Photography remains a medium which can tell your story alongside the moving image. At ShepherdTone, we try to capture the magic of the moment and save it for posterity on the imager.
 ---
 
 

@@ -6,11 +6,9 @@ img: "/assets/img/contact.png"
 
 <div class="containter">
   <div class="row text-center">
-
-    <div class="col-1-of-3 center">
+    <div class="col-1-of-2 center">
       {% include contact.html %}
     </div>
-
   </div>
 </div>
 

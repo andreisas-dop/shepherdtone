@@ -10,6 +10,7 @@ socials:
   instagram_username: instantsleepfilm
   filmfreeway: ThisWillMakeYouSleepInstantly
 vimeo_id: 1146230631
+copyright: 2026 Michalis Langas
 overview:
   original_title: This will make you sleep instantly
   genre: Surreal Comedy 

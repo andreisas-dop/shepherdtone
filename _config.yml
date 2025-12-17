@@ -18,7 +18,7 @@ subtitle: film production and media services
 email: office@shepherdtone.co.uk
 description: >- # this means to ignore newlines until "baseurl:"
     film production and media services in London
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://www.shepherdtone.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
 
 #instagram: andreisas_dop
@@ -28,6 +28,13 @@ url: "https://www.shepherdtone.co.uk" # the base hostname & protocol for your si
 
 # Build settings
 theme: minima
+
+gems:
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: true
 
 # Collections
 # output: false won't generate individual pages but will grab data for each collection item
@@ -67,10 +74,11 @@ collections:
     title: Photography
     order: 7
     output: false
+    text: "Before images could move, they stood still. Photography remains a medium which can tell your story alongside the moving image. At ShepherdTone, we try to capture the magic of the moment and save it for posterity on the imager."
   EPK:
     title: Film EPKs
     order: 0
-    permalink: /:path
+    permalink: /EPK/:path
     output: true
 
 # specify default template for collections
