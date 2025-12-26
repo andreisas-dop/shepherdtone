@@ -7,7 +7,11 @@
 {% endif %}
 
 
+{% if item.EPK %}
+<a class="col-1-of-3" href="{{ item.EPK }}" target="_blank"> 
+{% else %}
 <a class="col-1-of-3" onclick="fullscreen('video_{{ video_id }}')">
+{% endif %}
 
   <div class="image">
     <img src="{{ item.thumb }}">
@@ -19,11 +23,13 @@
     <h4 class="text-center">&nbsp;</h4>
   {% endif %}
 
+  {% if video_id %}
   <div class="fullscreen" id="video_{{ video_id }}">
     <iframe src="{{ player_id }}" frameborder="0" loading="lazy"
             webkitallowfullscreen mozallowfullscreen allowfullscreen allow="fullscreen;"
             class="hide">
     </iframe>
   </div>
+  {% endif %}
 
 </a>
